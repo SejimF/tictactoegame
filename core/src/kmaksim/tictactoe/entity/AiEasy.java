@@ -39,8 +39,8 @@ public class AiEasy extends AiBase {
         this.cells = cells;
     }
 
-    @Deprecated
-    public int easyMove_OLD() {
+    @Override
+    public int easyMove() {
         int move = 0;
 
         move = MathUtils.random(0, 8);
@@ -55,12 +55,12 @@ public class AiEasy extends AiBase {
 
         return 0;
     }
-
-    public int easyMove(){
-
-
-        return 0;
-    }
+//
+//    public int easyMove(){
+//
+//
+//        return 0;
+//    }
 
     public CellBase getCell() {
         return cell;
