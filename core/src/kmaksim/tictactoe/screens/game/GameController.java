@@ -227,6 +227,16 @@ public class GameController {
 
         setCellByPlayer(aiEasy.easyMove(), aiEasy.getCell());
 
+        debugCells();
+    }
+
+    public void debugCells(){
+
+
+
+        for(int i = 0; i < cells.length; i++){
+            log.debug("inside cell : " + cells[i]);
+        }
     }
 
     // == private methods ==

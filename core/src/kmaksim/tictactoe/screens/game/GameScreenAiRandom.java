@@ -4,6 +4,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
 
 import kmaksim.tictactoe.MyGdxGametictactoe;
+import kmaksim.tictactoe.screens.menuScreens.AiPlayMenu;
 import kmaksim.tictactoe.screens.menuScreens.MenuScreen;
 
 /**
@@ -53,7 +54,7 @@ public class GameScreenAiRandom implements Screen{
     }
 
     public void setScreen(){
-        game.setScreen(new MenuScreen(game));
+        game.setScreen(new AiPlayMenu(game));
     }
 
     @Override

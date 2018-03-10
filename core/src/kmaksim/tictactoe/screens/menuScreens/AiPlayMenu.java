@@ -62,7 +62,7 @@ public class AiPlayMenu extends MenuScreenBase{
 
 
 
-        final TextButton back = new TextButton("EXIT", uiSkin);
+        final TextButton back = new TextButton("BACK", uiSkin);
         back.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
@@ -90,7 +90,7 @@ public class AiPlayMenu extends MenuScreenBase{
 
     private void easy(){
         click();
-
+        game.setScreen(new GameScreenAiRandom(game));
     }
 
     private void back(){

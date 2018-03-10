@@ -21,6 +21,8 @@ public class AiEasy extends AiBase {
     private CellBase cell;
     private GameController controller;
 
+    int move = 0;
+
 
     // == constructors ==
 
@@ -41,11 +43,10 @@ public class AiEasy extends AiBase {
 
     @Override
     public int easyMove() {
-        int move = 0;
 
         move = MathUtils.random(0, 8);
 
-        if(cells[move].getPoint() == 0){
+        if(cells[move].getTag().contains("Cell_null")){
             log.debug("Return point " + cells[move].getPoint());
             log.debug("random number " + move);
             return move;
@@ -53,7 +54,7 @@ public class AiEasy extends AiBase {
             easyMove();
         }
 
-        return 0;
+        return move;
     }
 //
 //    public int easyMove(){

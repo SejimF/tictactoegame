@@ -127,7 +127,8 @@ public class GameRenderer implements Disposable {
 
         if(!controller.checWin() && controller.getCurrentPlayer().getName().contains("X")) {
             checkTouch();
-        }else if(!controller.checWin() && controller.getCurrentPlayer().getName().contains("O")){
+
+        }else if(!controller.checWin() && controller.getCurrentPlayer().getName().contains("O") && !controller.chekDraw()){
             boolean touched = false;
             controller.aiMoveEasy();
             controller.changeCurrentPlayer();
@@ -295,6 +296,7 @@ public class GameRenderer implements Disposable {
                             worldTouch.y < controller.getCells()[index].getY() + GameConfig.BUTTON_WIDTH && touched == false && controller.getBoard().getCells()[index].getTag().contains("Cell_null")) {
                         controller.setCellByPlayer(index, controller.getCurrentPlayer().getButton());
                         controller.changeCurrentPlayer();
+                        controller.debugCells();
                         touched = true;
 
                     }
